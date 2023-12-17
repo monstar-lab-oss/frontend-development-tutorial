@@ -15,7 +15,7 @@
     - [CSS](#css)
     - [JavaScript](#javascript)
   - [レスポンシブデザインの基本](#レスポンシブデザインの基本)
-  - [ハンズオン- レスポンシブデザイン](#ハンズオン--レスポンシブデザイン)
+  - [Hands-on レスポンシブデザイン](#hands-on-レスポンシブデザイン)
   - [JavaScriptとTypescript](#javascriptとtypescript)
   - [TypeScriptの特徴](#typescriptの特徴)
   - [Node.js](#nodejs)
@@ -24,6 +24,26 @@
   - [デプロイメント](#デプロイメント)
   - [デバッグツールの活用](#デバッグツールの活用)
 - [Chapter 3 フロントエンドフレームワーク](#chapter-3-フロントエンドフレームワーク)
+  - [React](#react)
+  - [Angular](#angular)
+  - [Vue.js](#vuejs)
+  - [Svelte](#svelte)
+  - [Hands-on React/Vue.js](#hands-on-reactvuejs)
+  - [Vue.jsの基本](#vuejsの基本)
+    - [Vue.jsの基本構造](#vuejsの基本構造)
+    - [コンポーネントベースの開発](#コンポーネントベースの開発)
+  - [Hands-on Vue.jsコンポーネント作成](#hands-on-vuejsコンポーネント作成)
+    - [Vue.jsコンポーネントの課題](#vuejsコンポーネントの課題)
+  - [状態管理ライブラリ](#状態管理ライブラリ)
+  - [コンポーネントライブラリの活用](#コンポーネントライブラリの活用)
+  - [Hands-on CSS/UIライブラリーの使用](#hands-on-cssuiライブラリーの使用)
+    - [課題1 Tailwind CSSによるレスポンシブ実装](#課題1-tailwind-cssによるレスポンシブ実装)
+    - [課題2 UIライブラリー実装](#課題2-uiライブラリー実装)
+- [Vue.jsの深堀り](#vuejsの深堀り)
+  - [非同期処理](#非同期処理)
+  - [REST APIとの連携](#rest-apiとの連携)
+  - [Hands-on REST APIの使用](#hands-on-rest-apiの使用)
+  - [Hands-on Blogシングルページアプリケーション実践](#hands-on-blogシングルページアプリケーション実践)
 
 
 
@@ -199,7 +219,7 @@ CSSのメディアクエリを使用して、特定の画面サイズやデバ�
 
 
 
-## ハンズオン- レスポンシブデザイン
+## Hands-on レスポンシブデザイン
 
 **課題**
 [このURL](https://codepen.io/don-wang-ml/pen/poqLPvK)を開いて，CSSを修正する
@@ -350,3 +370,352 @@ CI/CDツールを使用して、自動化されたデプロイメントパイプ
 
 
 # Chapter 3 フロントエンドフレームワーク
+
+## React
+
+<img src="./images/react-logo.png" width="100" height="100">
+
+**Facebook**が開発した[React](https://ja.react.dev/)は、コンポーネントベースのライブラリで、**大規模な**シングルページアプリケーション（SPA）の開発に広く使用されています。仮想DOMを使用してパフォーマンスを最適化し、**コミュニティ**と**エコシステム**が非常に活発です。
+
+Componentコード例：
+
+```javascript
+import React from 'react';
+
+class HelloWorld extends React.Component {
+  render() {
+    const { name } = this.props; 
+    return <h1>Hello, {name}!</h1>;
+  }
+}
+
+export default HelloWorld;
+```
+
+
+## Angular
+
+<img src="./images/angular-logo.png" width="100" height="100">
+
+**Google**が開発した[Angular](https://angular.jp/)は、堅牢なフレームワークで、**複雑**なアプリケーションの開発に適しており、テストやドキュメント作成などの**機能が充実**しています。型安全性を重視しています（TypeScript）。
+
+Componentコード例：
+```typescript
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-hello-world',
+  template: '<h1>Hello, {{ name }}!</h1>',
+　})
+export class HelloWorldComponent {
+  @Input() name: string;
+}
+
+```
+
+## Vue.js
+<img src="./images/vue-logo.png" width="100" height="100">
+
+[Vue.js](https://ja.vuejs.org/)は、Angularの元開発者により開発されました。
+**シンプル**で**学習しやすい**フレームワークで、**小規模から中規模**のプロジェクトに適しています。コンポーネントベースのアーキテクチャとリアクティブなデータバインディングを特徴としています。
+
+Componentコード例：
+```html
+<template>
+  <h1>Hello, {{ name }}!</h1>
+</template>
+
+<script setup>
+import { ref, defineProps } from 'vue';
+
+const { name } = defineProps(['name']);
+</script>
+```
+
+## Svelte
+
+<img src="./images/svelte-logo.png" width="100" height="100">
+
+[Svelte](https://svelte.jp/)は、コンパイル型のフレームワークで、仮装DOMとランタイムライブラリが必要ないため、ファイルサイズが**小さく高速**です。**プレーンなJavaScript**を使用し、コンポーネント指向の開発をサポートします。
+
+Componentコード例：
+```html
+<script>
+  export let name;
+</script>
+
+<h1>Hello, {name}!</h1>
+```
+
+
+## Hands-on React/Vue.js
+
+**課題**：
+- React/Vue.jsのアプリを立ち上げる
+- 例のcomponentを実装する
+
+*＊事前にnode環境の設定が必要です。推奨 node18~*
+*＊デモのためオプションは全部noでOK*
+
+**Reactのセットアップ**
+
+```shell
+$ npx create-next-app
+$ cd ‘上に入力した名前’
+$ npm run dev
+```
+
+**Vue.jsのセットアップ**
+
+```shell
+$ npm create vue@latest
+$ cd ‘上に入力した名前’
+$ npm install
+$ npm run dev
+```
+
+## Vue.jsの基本
+
+### Vue.jsの基本構造
+
+**Sample Component**
+
+```html
+<template>
+  <h1>Hello, {{ name }}!</h1>
+  <p>{{ message }}</p>
+  <button @click="reverseMessage">Reverse</button>
+</template>
+
+<script setup>
+import { ref, defineProps } from "vue";
+
+const { name } = defineProps(["name"]);
+const message = ref("This is component demo!");
+const reverseMessage = () => {
+  message.value = message.value.split("").reverse().join("");
+};
+</script>
+
+<style scoped>
+h1 { font-size: 18px; }
+</style>
+```
+
+- **.vue** 拡張子のファイルに記述されます。
+- **`<template>`** セクション内にコンポーネントのHTMLを記述します。
+- **`<script setup>`** ブロック内でコンポーネントのデータとメソッドを定義します。
+- **`<style scoped>`**ブロックはコンポーネントのCSSを定義します。
+- **data**: アプリケーションの状態を表現します。`const` キーワードを使用して変数を宣言し、ref を使用してリアクティブなデータを作成します。
+- **props**: 親コンポーネントから受け取りプロパティを定義します。`defineProps name`を使用してそれをテンプレート内で使用しています。
+- **directive**: `<template>`内でデータを表示するために、ディレクティブが使用されます。例えば、`{{ message }}` はデータ `message` の値を表示します。他にも、`v-for`、`v-if`、`v-bind`などのディレクティブがあります。
+- **method**: イベント処理やデータの操作に使用されます。ボタンがクリックされたときに `reverseMessage` `メソッドが呼び出され、message` データが反転されます。
+
+
+### コンポーネントベースの開発
+
+コンポーネントベースの開発は、アプリケーションを独立した部品やコンポーネントに分割し、それぞれのコンポーネントを構築、テスト、および保守する方法です。
+
+- **コンポーネント**：
+再利用可能な部品で、特定の機能やUI要素を表し、単一の役割を果たします。
+- **プロパティとイベント**:
+コンポーネント間のコミュニケーションは、親から子にプロパティを渡し、子からイベントを発行して親に情報を伝えます。
+- **メリット**：
+  - 開発効率の向上
+  - 保守性の向上
+  - テストのしやすさ
+
+**コンポーネントの利用**:コンポーネントを他のコンポーネント内で利用できます。
+
+```html
+<script setup>
+import BasicDemo from "../../components/BasicDemo.vue";
+</script>
+
+<template>
+  <BasicDemo name="Vue" />
+</template>
+```
+
+## Hands-on Vue.jsコンポーネント作成
+
+**事前準備**
+
+[/hands-on/question/](/hands-on/question/)から課題用ソースコードをコピー
+- VSCodeでフォルダを開く
+- VSCodeでTerminal/PowerShellを開く
+```shell
+$ cd vue-demo
+$ npm install
+$ npm run dev
+```
+
+＊課題の解答は[/hands-on/answer/](/hands-on/answer/)をご参考ください。
+
+### Vue.jsコンポーネントの課題
+
+- Demo >Componentを参照し
+- Counterのコンポーネントを作成する
+- 数字を表示する
+- ボタン押すとプラス1
+- Hands On >Componentにて表示される
+  
+実装結果例：
+![vue-component](/images/vue-hands-on-1.png)
+
+## 状態管理ライブラリ
+
+**状態管理**とは、状態を中央で管理し、アプリケーション内のコンポーネント間でデータを共有する方法です。
+
+[Pinia](https://pinia.vuejs.org/)はVue 3向けの状態管理ライブラリで、より簡単に管理することができます。
+
+例：Counterの状態をアプリ全体に共有する
+```javascript
+export const useCounterStore = defineStore("counter", () => {
+  const count = ref(0);
+  const doubleCount = computed(() => count.value * 2);
+  function increment() {
+    count.value++;
+  }
+
+  return { count, doubleCount, increment };
+});
+```
+
+## コンポーネントライブラリの活用
+
+公開のUI・機能コンポーネントを利用することで、開発時間を短縮することができます。
+
+
+- Vue 3全般的なリソースリスト：
+  https://github.com/vuesomedev/awesome-vue-3
+- CSSライブラリー
+  - [Tailwind CSS](https://tailwindcss.com/)：ユーティリティファーストなCSSフレームワークです。CSSの各プロパティに対応するクラスを用意し、それらを組み合わせることでスタイリングを行う方法です。
+- UIライブラリー
+  - [Vuetify](https://vuetifyjs.com/en/)：マテリアルデザインの原則に従っています。コンポーネントのカスタマイズが容易であり、アプリケーションの外観を整えるのに役立ちます。
+  - [Ant Design Vue](https://antdv.com/components/overview)：幅広いコンポーネントとテーマを提供し、多言語対応、アクセシビリティ、カスタマイズ性などがあります。大規模なプロジェクトに適しています。
+
+## Hands-on CSS/UIライブラリーの使用
+
+### 課題1 Tailwind CSSによるレスポンシブ実装
+
+
+- src/views/hands-on/Responsive.vue
+- Hands On >Responsive画面をレスポンシブに変更
+- Tailwindの方法でCSSを修正
+
+- 目標：
+  - Laptop画面：4つ横並び
+  - Tablet画面：2つ横並び
+  - SP画面：1つ横並び
+
+参考：Tailwind CSSのレスポンシブについて
+https://tailwindcss.com/docs/responsive-design
+
+
+### 課題2 UIライブラリー実装
+
+- src/views/hands-on/UI.vue
+- Hands On >UI Library画面にユーザー情報を表示
+- ユーザーデータは`<script setup>`に定義済み
+- And Design Vueのコンポーネントを利用して、キレイなUIを作る
+
+参考：And Designのコンポーネント
+https://antdv.com/components/overview
+
+
+# Vue.jsの深堀り
+
+## 非同期処理
+
+JavaScriptは**シングルスレッド**のプログラミング言語であるため、一度に一つのタスクしか実行できません。
+
+非同期処理の利用で
+- 処理の並列化：複数処理の実行時間を短縮する
+- ユーザーエクスペリエンスの向上：ユーザーが操作を実行した直後に処理結果を表示する
+
+非同期処理の種類
+- Micro Task Queue
+  - Promiseオブジェクトなど
+  - 優先度高い
+- Macro Task Queue
+  - setTimeout(), setInterval()など
+  - 優先度低い
+
+例：　下記コードをDevToolsのconsoleで実行して、結果を確認しましょう
+```javascript
+console.log("start");
+
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+
+Promise.resolve("promise").then(res => console.log(res));
+
+console.log("end");
+```
+
+## REST APIとの連携
+
+REST API基本的な仕組み
+- **リソースの識別**：URI（Uniform Resource Identifier）リソースの場所や属性を示す文字列
+- **メソッド**：HTTPメソッドを使用して操作を表現します。GETはリソースの読み取り、POSTはリソースの作成、PUTはリソースの更新、DELETEはリソースの削除を表します。
+- **データ**：JSON（JavaScript Object Notation）などのテキスト形式を使用してデータを表現します。
+
+GETの例 
+```shell
+$ curl https://jsonplaceholder.typicode.com/user/1
+```
+
+フロントエンドでのREST API接続
+- fetch() 関数
+- Axios ライブラリ
+
+Fetchの例
+```html
+<script setup>
+const data = await fetch('/api/users').then((response) => response.json());
+</script>
+```
+
+Axiosの例
+```html
+<script setup>
+import { Axios } from 'axios';
+const { data } = await Axios.get('/api/users');
+</script>
+```
+
+- `.then` メソッドは、非同期処理が正常に完了した場合に呼び出されます
+- `.catch` メソッドは、非同期処理が失敗した場合に呼び出されます。
+
+
+## Hands-on REST APIの使用
+
+**課題**
+- src/views/hands-on/UI.vue
+- Hands On >UI Library画面のユーザー情報をAPIから取得し、画面に表示する
+
+API URL：
+https://jsonplaceholder.typicode.com/users/5
+
+＊user idは1 - 10まで指定できます
+
+## Hands-on Blogシングルページアプリケーション実践
+
+**課題**
+- src/views/hands-on/BlogList.vue
+- Hands On >Blog 画面に記事一覧を作成
+  - タイトルと詳細へボタン
+- UIライブラリーを利用し、キレイに並ぶ
+- 詳細へボタンを押下したら記事詳細画面へ遷移
+- 記事詳細画面で記事の内容を表示
+
+- ボーナスチャレンジ：
+  - 詳細画面でボタン押したら記事のコメントを表示する
+
+コメントAPI URL：
+https://jsonplaceholder.typicode.com/posts/${id}/comments
+
+
+
