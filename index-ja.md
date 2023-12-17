@@ -1,49 +1,49 @@
 
 - [本講座の目的](#本講座の目的)
-- [Chapter 1 モダンフロントエンド開発の概要](#chapter-1-モダンフロントエンド開発の概要)
-  - [フロントエンド開発とは何か？](#フロントエンド開発とは何か)
-  - [フロントエンドとバックエンド開発比較](#フロントエンドとバックエンド開発比較)
-  - [MVCモデル](#mvcモデル)
-  - [シングルページアプリケーション（SPA）の基本](#シングルページアプリケーションspaの基本)
-  - [フロントエンド開発（SPA）とMVCモデルとの違い](#フロントエンド開発spaとmvcモデルとの違い)
-  - [フロントエンド開発（SPA）メリットとデメリット](#フロントエンド開発spaメリットとデメリット)
-  - [フロントエンドエコシステムの概要](#フロントエンドエコシステムの概要)
-  - [フロントエンド技術の進化・最新の開発トレンド](#フロントエンド技術の進化最新の開発トレンド)
-- [Chapter 2 フロントエンド開発の基礎](#chapter-2-フロントエンド開発の基礎)
-  - [HTML、CSS、JavaScriptの役割（W3CのWeb標準）](#htmlcssjavascriptの役割w3cのweb標準)
+- [Chapter 1. モダンフロントエンド開発の概要](#chapter-1-モダンフロントエンド開発の概要)
+  - [1. フロントエンド開発とは何か？](#1-フロントエンド開発とは何か)
+  - [2. フロントエンドとバックエンド開発比較](#2-フロントエンドとバックエンド開発比較)
+  - [3. MVCモデル](#3-mvcモデル)
+  - [4. シングルページアプリケーション（SPA）の基本](#4-シングルページアプリケーションspaの基本)
+  - [5. フロントエンド開発（SPA）とMVCモデルとの違い](#5-フロントエンド開発spaとmvcモデルとの違い)
+  - [6. フロントエンド開発（SPA）メリットとデメリット](#6-フロントエンド開発spaメリットとデメリット)
+  - [7. フロントエンドエコシステムの概要](#7-フロントエンドエコシステムの概要)
+  - [8. フロントエンド技術の進化・最新の開発トレンド](#8-フロントエンド技術の進化最新の開発トレンド)
+- [Chapter 2. フロントエンド開発の基礎](#chapter-2-フロントエンド開発の基礎)
+  - [1. HTML、CSS、JavaScriptの役割（W3CのWeb標準）](#1-htmlcssjavascriptの役割w3cのweb標準)
     - [HTML](#html)
     - [CSS](#css)
     - [JavaScript](#javascript)
-  - [レスポンシブデザインの基本](#レスポンシブデザインの基本)
-  - [Hands-on レスポンシブデザイン](#hands-on-レスポンシブデザイン)
-  - [JavaScriptとTypescript](#javascriptとtypescript)
-  - [TypeScriptの特徴](#typescriptの特徴)
-  - [Node.js](#nodejs)
-  - [npm (package.json)](#npm-packagejson)
-  - [ビルド](#ビルド)
-  - [デプロイメント](#デプロイメント)
-  - [デバッグツールの活用](#デバッグツールの活用)
-- [Chapter 3 フロントエンドフレームワーク](#chapter-3-フロントエンドフレームワーク)
-  - [React](#react)
-  - [Angular](#angular)
-  - [Vue.js](#vuejs)
-  - [Svelte](#svelte)
-  - [Hands-on React/Vue.js](#hands-on-reactvuejs)
-  - [Vue.jsの基本](#vuejsの基本)
+  - [2. レスポンシブデザインの基本](#2-レスポンシブデザインの基本)
+  - [Hands-on 1. レスポンシブデザイン](#hands-on-1-レスポンシブデザイン)
+  - [3. JavaScriptとTypescript](#3-javascriptとtypescript)
+  - [4. TypeScriptの特徴](#4-typescriptの特徴)
+  - [5. Node.js](#5-nodejs)
+  - [6. npm (package.json)](#6-npm-packagejson)
+  - [7. ビルド](#7-ビルド)
+  - [8. デプロイメント](#8-デプロイメント)
+  - [9. デバッグツールの活用](#9-デバッグツールの活用)
+- [Chapter 3. フロントエンドフレームワーク](#chapter-3-フロントエンドフレームワーク)
+  - [1. React](#1-react)
+  - [2. Angular](#2-angular)
+  - [3. Vue.js](#3-vuejs)
+  - [4. Svelte](#4-svelte)
+  - [Hands-on 2. React/Vue.js](#hands-on-2-reactvuejs)
+  - [5. Vue.jsの基本](#5-vuejsの基本)
     - [Vue.jsの基本構造](#vuejsの基本構造)
     - [コンポーネントベースの開発](#コンポーネントベースの開発)
-  - [Hands-on Vue.jsコンポーネント作成](#hands-on-vuejsコンポーネント作成)
+  - [Hands-on 3. Vue.jsコンポーネント作成](#hands-on-3-vuejsコンポーネント作成)
     - [Vue.jsコンポーネントの課題](#vuejsコンポーネントの課題)
-  - [状態管理ライブラリ](#状態管理ライブラリ)
-  - [コンポーネントライブラリの活用](#コンポーネントライブラリの活用)
-  - [Hands-on CSS/UIライブラリーの使用](#hands-on-cssuiライブラリーの使用)
+  - [6. 状態管理ライブラリ](#6-状態管理ライブラリ)
+  - [7. コンポーネントライブラリの活用](#7-コンポーネントライブラリの活用)
+  - [Hands-on 4. CSS/UIライブラリーの使用](#hands-on-4-cssuiライブラリーの使用)
     - [課題1 Tailwind CSSによるレスポンシブ実装](#課題1-tailwind-cssによるレスポンシブ実装)
     - [課題2 UIライブラリー実装](#課題2-uiライブラリー実装)
-- [Vue.jsの深堀り](#vuejsの深堀り)
-  - [非同期処理](#非同期処理)
-  - [REST APIとの連携](#rest-apiとの連携)
-  - [Hands-on REST APIの使用](#hands-on-rest-apiの使用)
-  - [Hands-on Blogシングルページアプリケーション実践](#hands-on-blogシングルページアプリケーション実践)
+- [Chapter 4. Vue.jsの深堀り](#chapter-4-vuejsの深堀り)
+  - [1. 非同期処理](#1-非同期処理)
+  - [2. REST APIとの連携](#2-rest-apiとの連携)
+  - [Hands-on 5. REST APIの使用](#hands-on-5-rest-apiの使用)
+  - [Hands-on 6. Blogシングルページアプリケーション実践](#hands-on-6-blogシングルページアプリケーション実践)
 
 
 
@@ -57,9 +57,9 @@
 *<span style="font-size: 0.7em" >＊異なるフロントエンドの開発手法と構成が多数ありますが、講義の内容は弊社の開発実績をベースとして一般化されたものになります。</span>*
 
 
-# Chapter 1 モダンフロントエンド開発の概要
+# Chapter 1. モダンフロントエンド開発の概要
 
-## フロントエンド開発とは何か？
+## 1. フロントエンド開発とは何か？
 
 フロントエンド :　
 - ユーザーが直接操作するインターフェース部分を担当します。
@@ -72,7 +72,7 @@
 ![Frontend and Backend](/images/frontend-backend.png)
 
 
-## フロントエンドとバックエンド開発比較
+## 2. フロントエンドとバックエンド開発比較
 
 |  | フロントエンド | バックエンド |
 | -------- | -------- | -------- |
@@ -81,7 +81,7 @@
 | 使用される技術 | HTML、CSS、JavaScript | Java、Python、PHP、Ruby など |
 | 主な仕事内容 | 画面や動作の開発 | データ処理や機能の実現 |
 
-## MVCモデル
+## 3. MVCモデル
 
 - Model (モデル):
     - データとアプリケーションのビジネスロジックを管理する
@@ -95,7 +95,7 @@
 
 MVCアーキテクチャのWebフレームワーク *ASP .NET MVC、Ruby on Rails、PHP Laravel*
 
-## シングルページアプリケーション（SPA）の基本
+## 4. シングルページアプリケーション（SPA）の基本
 
 - **1つのHTMLファイル**: SPAは通常、1つのHTMLファイル（index.htmlなど）を持っています。このHTMLファイルは初回のアクセス時に読み込まれ、その後のページ遷移では再度読み込む必要がありません。
 - **動的なコンテンツ**: SPAはJavaScriptを使用して、ページ内のコンテンツを動的に変更します。これにより、ページ遷移がスムーズになります。
@@ -105,7 +105,7 @@ MVCアーキテクチャのWebフレームワーク *ASP .NET MVC、Ruby on Rail
 - **SEO対策**: SPAは初期表示時にHTMLを読み込むため、検索エンジン最適化（SEO）に注意が必要です。一部のSPAフレームワークはサーバーサイドレンダリング（SSR）をサポートし、SEOを向上させるためのソリューションを提供しています。
 - **パフォーマンス**: SPAは初回ロード時に大きなJavaScriptファイルをダウンロードすることがあるため、パフォーマンスに注意が必要です。コード分割やバンドリングツールを使用して最適化することが一般的です。
 
-## フロントエンド開発（SPA）とMVCモデルとの違い
+## 5. フロントエンド開発（SPA）とMVCモデルとの違い
 
 *MVCのView (ビュー)に近いイメージですが* 
 
@@ -123,7 +123,7 @@ SPAの特徴：
 
 例：[Apple開発者ガイド](https://developer.apple.com/jp/design/human-interface-guidelines)
 
-## フロントエンド開発（SPA）メリットとデメリット
+## 6. フロントエンド開発（SPA）メリットとデメリット
 
 **メリット**
 - **ユーザーエクスペリエンスの向上**：ユーザーインタフェースと動作に焦点を当てており、UXの向上を図ることができます
@@ -137,7 +137,7 @@ SPAの特徴：
 - SEO（検索エンジン最適化）影響
 
 
-## フロントエンドエコシステムの概要
+## 7. フロントエンドエコシステムの概要
 
 - **HTML**：マークアップ言語、コンテンツの構造の定義
 - **CSS**：スタイルシート言語、見た目やデザインの制御
@@ -150,7 +150,7 @@ SPAの特徴：
 - **ビルドツール**：ソースコードを本番用に変換するためのツール　例：[Vite](https://ja.vitejs.dev/guide/why.html), [Babel](https://babeljs.io/)等
 - **デプロイメント**：本番環境にデプロイするプロセス 例：クラウドホスティング、CDN等
 
-## フロントエンド技術の進化・最新の開発トレンド
+## 8. フロントエンド技術の進化・最新の開発トレンド
 
 - **コンポーネントベースの開発**:：UI要素を再利用可能なコンポーネントとして設計し、メンテナンス性を向上させる
 - **TypeScriptやJSDoc**：型安全性を提供し、コードの品質を向上させる
@@ -162,9 +162,9 @@ SPAの特徴：
 
 
 
-# Chapter 2 フロントエンド開発の基礎
+# Chapter 2. フロントエンド開発の基礎
 
-## HTML、CSS、JavaScriptの役割（W3CのWeb標準）
+## 1. HTML、CSS、JavaScriptの役割（W3CのWeb標準）
 
 ### HTML
 
@@ -202,7 +202,7 @@ SPAの特徴：
 - パフォーマンスを意識する
 - セキュリティに注意する
 
-## レスポンシブデザインの基本
+## 2. レスポンシブデザインの基本
 
 レスポンシブデザインは、異なるデバイスや画面サイズに適応させるためのデザインアプローチです。
 
@@ -219,7 +219,7 @@ CSSのメディアクエリを使用して、特定の画面サイズやデバ�
 
 
 
-## Hands-on レスポンシブデザイン
+## Hands-on 1. レスポンシブデザイン
 
 **課題**
 [このURL](https://codepen.io/don-wang-ml/pen/poqLPvK)を開いて，CSSを修正する
@@ -232,7 +232,7 @@ CSSのメディアクエリを使用して、特定の画面サイズやデバ�
 ![hands-on-responsive](images/hands-on-responsive.png)
 
 
-## JavaScriptとTypescript
+## 3. JavaScriptとTypescript
 
 JavaScriptは**動的型付け**言語であり、変数の型が実行時に決まります。
 
@@ -270,7 +270,7 @@ function add(a: number, b: number): number {
 }
 ```
 
-## TypeScriptの特徴
+## 4. TypeScriptの特徴
 
 - **型安全性**
 静的型付け言語であり、変数の型はコード記述時に明示的に指定されます。これにより、型関連のエラーを事前に捉えることができます。
@@ -281,7 +281,7 @@ TypeScriptコードはコンパイルが必要です。TypeScriptファイル（
 - **ツールとエコシステム**
 TypeScriptには型定義ファイル（.d.ts）が提供され、多くのJavaScriptライブラリとの統合が容易です。また、豊富な開発ツール（例: Visual Studio Code）やフレームワーク（例: Angular, React）とも組み合わせて使用できます。
 
-## Node.js
+## 5. Node.js
 
 - **JavaScript/TypeScriptの実行環境**: 
 Node.jsはJavaScriptをサーバーサイドやコマンドラインで実行するためのランタイム環境です。これにより、JavaScriptをブラウザ以外の環境で使用できます。
@@ -302,7 +302,7 @@ Node.jsはnpmを通じてパッケージ管理が可能です。この統合に�
 Node.jsはさまざまなプラットフォーム（Windows、macOS、Linuxなど）で動作し、クロスプラットフォームの開発が容易です。
 
 
-## npm (package.json)
+## 6. npm (package.json)
 - **パッケージ管理**: 
 npmはNode.jsのパッケージ管理ツールで、JavaScriptライブラリやモジュールのインストール、アップデートを行う
 
@@ -319,7 +319,7 @@ npmはNode.jsのパッケージ管理ツールで、JavaScriptライブラリや
 npmは世界中の開発者によって使用されており、数百万ものパッケージが提供されています。
 
 
-## ビルド
+## 7. ビルド
 - **コードのコンパイル**: 
 ソースコード（主にHTML、CSS、JavaScript）をコンパイルおよび最適化します。これには、TypeScriptやSassのコンパイル、JavaScriptのバンドリングやトランスパイルが含まれます。
 
@@ -333,7 +333,7 @@ npmは世界中の開発者によって使用されており、数百万もの�
 プロダクションビルドでは、静的ファイルにハッシュやバージョン番号を追加して、キャッシュの制御やブラウザキャッシュの問題を回避します。
 
 
-## デプロイメント
+## 8. デプロイメント
 
 - **本番環境へのファイル配置**: 
 ビルドされたファイルは、本番環境のウェブサーバーやクラウドホスティングプロバイダーに配置されます。これにはFTP、SSH、CI/CDツール、デプロイスクリプトなどが使用されます。
@@ -349,7 +349,7 @@ CI/CDツールを使用して、自動化されたデプロイメントパイプ
 
 例：クラウドホスティング [Vercel](https://vercel.com/) 
 
-## デバッグツールの活用
+## 9. デバッグツールの活用
 
 - Chrome DevTools: 
 ブラウザのデベロッパーツールは、フロントエンド開発者にとって最も一般的で強力なデバッグツールの一つです。
@@ -369,9 +369,9 @@ CI/CDツールを使用して、自動化されたデプロイメントパイプ
   - [axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)：アクセシビリティスキャン
 
 
-# Chapter 3 フロントエンドフレームワーク
+# Chapter 3. フロントエンドフレームワーク
 
-## React
+## 1. React
 
 <img src="./images/react-logo.png" width="100" height="100">
 
@@ -393,7 +393,7 @@ export default HelloWorld;
 ```
 
 
-## Angular
+## 2. Angular
 
 <img src="./images/angular-logo.png" width="100" height="100">
 
@@ -413,7 +413,7 @@ export class HelloWorldComponent {
 
 ```
 
-## Vue.js
+## 3. Vue.js
 <img src="./images/vue-logo.png" width="100" height="100">
 
 [Vue.js](https://ja.vuejs.org/)は、Angularの元開発者により開発されました。
@@ -432,9 +432,9 @@ const { name } = defineProps(['name']);
 </script>
 ```
 
-## Svelte
+## 4. Svelte
 
-<img src="./images/svelte-logo.png" width="100" height="100">
+<img src="./images/svelte-logo.png" width="100" >
 
 [Svelte](https://svelte.jp/)は、コンパイル型のフレームワークで、仮装DOMとランタイムライブラリが必要ないため、ファイルサイズが**小さく高速**です。**プレーンなJavaScript**を使用し、コンポーネント指向の開発をサポートします。
 
@@ -448,7 +448,7 @@ Componentコード例：
 ```
 
 
-## Hands-on React/Vue.js
+## Hands-on 2. React/Vue.js
 
 **課題**：
 - React/Vue.jsのアプリを立ち上げる
@@ -464,6 +464,7 @@ $ npx create-next-app
 $ cd ‘上に入力した名前’
 $ npm run dev
 ```
+![hands-on react](./images/handson-react.png)
 
 **Vue.jsのセットアップ**
 
@@ -473,8 +474,10 @@ $ cd ‘上に入力した名前’
 $ npm install
 $ npm run dev
 ```
+![hands-on vue](./images/handson-vue.png)
 
-## Vue.jsの基本
+
+## 5. Vue.jsの基本
 
 ### Vue.jsの基本構造
 
@@ -537,7 +540,7 @@ import BasicDemo from "../../components/BasicDemo.vue";
 </template>
 ```
 
-## Hands-on Vue.jsコンポーネント作成
+## Hands-on 3. Vue.jsコンポーネント作成
 
 **事前準備**
 
@@ -563,7 +566,7 @@ $ npm run dev
 実装結果例：
 ![vue-component](/images/vue-hands-on-1.png)
 
-## 状態管理ライブラリ
+## 6. 状態管理ライブラリ
 
 **状態管理**とは、状態を中央で管理し、アプリケーション内のコンポーネント間でデータを共有する方法です。
 
@@ -582,7 +585,7 @@ export const useCounterStore = defineStore("counter", () => {
 });
 ```
 
-## コンポーネントライブラリの活用
+## 7. コンポーネントライブラリの活用
 
 公開のUI・機能コンポーネントを利用することで、開発時間を短縮することができます。
 
@@ -595,7 +598,7 @@ export const useCounterStore = defineStore("counter", () => {
   - [Vuetify](https://vuetifyjs.com/en/)：マテリアルデザインの原則に従っています。コンポーネントのカスタマイズが容易であり、アプリケーションの外観を整えるのに役立ちます。
   - [Ant Design Vue](https://antdv.com/components/overview)：幅広いコンポーネントとテーマを提供し、多言語対応、アクセシビリティ、カスタマイズ性などがあります。大規模なプロジェクトに適しています。
 
-## Hands-on CSS/UIライブラリーの使用
+## Hands-on 4. CSS/UIライブラリーの使用
 
 ### 課題1 Tailwind CSSによるレスポンシブ実装
 
@@ -612,6 +615,9 @@ export const useCounterStore = defineStore("counter", () => {
 参考：Tailwind CSSのレスポンシブについて
 https://tailwindcss.com/docs/responsive-design
 
+実装結果例：
+![hands-on css](./images/handson-css.png)
+
 
 ### 課題2 UIライブラリー実装
 
@@ -623,10 +629,13 @@ https://tailwindcss.com/docs/responsive-design
 参考：And Designのコンポーネント
 https://antdv.com/components/overview
 
+実装結果例：
+![hands-on ui](./images/handson-ui.png)
 
-# Vue.jsの深堀り
 
-## 非同期処理
+# Chapter 4. Vue.jsの深堀り
+
+## 1. 非同期処理
 
 JavaScriptは**シングルスレッド**のプログラミング言語であるため、一度に一つのタスクしか実行できません。
 
@@ -655,7 +664,7 @@ Promise.resolve("promise").then(res => console.log(res));
 console.log("end");
 ```
 
-## REST APIとの連携
+## 2. REST APIとの連携
 
 REST API基本的な仕組み
 - **リソースの識別**：URI（Uniform Resource Identifier）リソースの場所や属性を示す文字列
@@ -690,7 +699,7 @@ const { data } = await Axios.get('/api/users');
 - `.catch` メソッドは、非同期処理が失敗した場合に呼び出されます。
 
 
-## Hands-on REST APIの使用
+## Hands-on 5. REST APIの使用
 
 **課題**
 - src/views/hands-on/UI.vue
@@ -701,7 +710,7 @@ https://jsonplaceholder.typicode.com/users/5
 
 ＊user idは1 - 10まで指定できます
 
-## Hands-on Blogシングルページアプリケーション実践
+## Hands-on 6. Blogシングルページアプリケーション実践
 
 **課題**
 - src/views/hands-on/BlogList.vue
@@ -719,3 +728,13 @@ https://jsonplaceholder.typicode.com/posts/${id}/comments
 
 
 
+実装結果例：
+
+Blog一覧
+![hands-on blog](./images/handson-blog-list.png)
+
+Blog詳細
+![hands-on blog detail](./images/handson-blog-detail.png)
+
+Blogコメント
+![hands-on blog comment](./images/handson-blog-comment.png)
