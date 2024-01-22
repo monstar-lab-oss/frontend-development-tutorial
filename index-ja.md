@@ -544,7 +544,7 @@ import BasicDemo from "../../components/BasicDemo.vue";
 
 **事前準備**
 
-[/hands-on/question/](/hands-on/question/)から課題用ソースコードをコピー
+[Hands On Vue Demo](https://github.com/monstar-lab-oss/frontend-development-tutorial-vue-handson.git)`main` branchから課題用ソースコードをコピー
 - VSCodeでフォルダを開く
 - VSCodeでTerminal/PowerShellを開く
 ```shell
@@ -553,7 +553,7 @@ $ npm install
 $ npm run dev
 ```
 
-＊課題の解答は[/hands-on/answer/](/hands-on/answer/)をご参考ください。
+＊課題の解答は[Hands On Vue Demo](https://github.com/monstar-lab-oss/frontend-development-tutorial-vue-handson.git)　各`feature/xxxx` branchをご参考ください。 `develop` branchは全部の解答が反映した内容になります。
 
 ### Vue.jsコンポーネントの課題
 
